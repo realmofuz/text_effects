@@ -36,21 +36,22 @@ float noise(vec2 n) {
 
 void main() {
     effect = 0;
+    
     vec3 font_color = texture(Sampler0, UV0).rgb; //checks 
     if(font_color == vec3(1.0, 242.0/255.0, 242.0/255.0)) effect = 1; // wave
     if(font_color == vec3(242.0/255.0, 1.0, 242.0/255.0)) effect = 2; // shake
     if(font_color == vec3(242.0/255.0, 242.0/255.0, 1.0)) effect = 3; // rainbow/gradient
     if(font_color == vec3(242.0/255.0, 1.0, 1.0)) effect = 4; // two-color
 
-    vec3 vertex_pos = Position;
+    vec3 vertex_pos = (ProjMat[3].x == -1)?Position:(Position*16.);
     int character = gl_VertexID/4;
 
     if(effect == 1) vertex_pos += vec3(0.,2.*sin((character+GameTime*WaveFrequency)/15.),0.);
-    if(effect == 2) vertex_pos += vec3(1.5*noise(vec2(GameTime*ShakeFrequency,character)),1.5*noise(vec2(character,GameTime*ShakeFrequency)),0.);
+    if(effect == 2) vertex_pos += vec3(1.5*noise(vec2(GameTime*ShakeFrequency,character))-0.75,1.5*noise(vec2(character,GameTime*ShakeFrequency))-0.75,0.);
     if(effect == 4 && fract(vertex_pos.z) < 0.01) vertex_pos -= vec3(1.,1.,0.);
 
     screenPos = vertex_pos;
-    gl_Position = ProjMat * ModelViewMat * vec4(vertex_pos, 1.0);
+    gl_Position = ProjMat * ModelViewMat * vec4(vertex_pos / ((ProjMat[3].x == -1)?1.:16.), 1.0);
 
     vertexDistance = fog_distance(Position, FogShape);
     vertexColor = Color * texelFetch(Sampler2, UV2 / 16, 0);

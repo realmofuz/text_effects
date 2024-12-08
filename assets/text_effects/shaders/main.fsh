@@ -46,10 +46,10 @@ void main() {
     }
     else if(effect == 4) {
     	if(color.a < 0.1) discard;
-	if(fract(screenPos.z)<0.01 && color.a == 1.0) discard;
-	if(fract(screenPos.z)>=0.01 && color.a < 1.0) discard;
-	color = vertexColor;
-	color.a = 1.;
+        if(fract(screenPos.z)<0.01 && color.a == 1.0) discard;
+        if(fract(screenPos.z)>=0.01 && color.a < 1.0) discard;
+        color = vertexColor;
+        color.a = 1.;
     }
     else color = color * vertexColor;
 
