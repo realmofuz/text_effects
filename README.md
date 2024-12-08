@@ -10,10 +10,10 @@ The provided implementations support only ASCII in the default Minecraft font. T
 The speed of periodic functions can be modified in `minecraft:shaders/core/rendertype_text.json`, though their units are not consistent.
 
 ## Currently supported effects:
-- `rgb(255, 242, 242)`: Wave - moves each character up and down on a sine wave.
-- `rgb(242, 255, 242)`: Shake - moves each character randomly using a noise function.
-- `rgb(242, 242, 255)`: Rainbow/Gradient - if the text color is grayscale, color each character with a shifting rainbow multiplied by that color. otherwise, create a white "shine" gradient that moves across the text.
-- `rgb(242, 255, 255)`: Two-color - move the shadow where the text normally is. if the pixel has full opacity, it is rendered on the foreground. otherwise, it is rendered on the shadow. by changing both the text and shadow colors, two colors can be used at the same time.
+- `rgb(255, 242, 242)`: Wave - Moves each character up and down on a sine wave.
+- `rgb(242, 255, 242)`: Shake - Moves each character randomly using a noise function.
+- `rgb(242, 242, 255)`: Rainbow/Gradient - If the text color is grayscale, color each character with a shifting rainbow multiplied by that color. Otherwise, create a white "shine" gradient that moves across the text.
+- `rgb(242, 255, 255)`: Two-color - Moves the shadow so it overlaps with the text. Renders each pixel on the text if it is fully opaque and on the shadow otherwise, allowing you to use two colors at the same time by changing the text color and shadow color.
 
 ## Included implementation fonts:
 - `text_effects:wave`: Implements Wave for ASCII in the default Minecraft font.
