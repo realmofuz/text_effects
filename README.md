@@ -1,4 +1,7 @@
 # Realm of Uz Text Effects
+
+![A demo image for the effects currently supported.](https://github.com/user-attachments/assets/8bbfb9dd-7762-4ec4-9196-23d75ce404ca)
+
 A simple shader system for adding text shaders to Minecraft using a font.
 
 The shaders work by very faintly coloring an entire font (separated by width so the background can be covered too without changing character width), and checking that in the text shader.
