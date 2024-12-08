@@ -1,0 +1,57 @@
+{
+    "providers": [
+        {
+            "type": "bitmap",
+            "file": "text_effects:font/shake/width1.png",
+            "ascent": 7,
+            "chars": [
+                "!',.:;i|"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "text_effects:font/shake/width2.png",
+            "ascent": 7,
+            "chars": [
+                " `l"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "text_effects:font/shake/width3.png",
+            "ascent": 7,
+            "chars": [
+                "\"()*I[]t{}"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "text_effects:font/shake/width4.png",
+            "ascent": 7,
+            "chars": [
+                "<>fk"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "text_effects:font/shake/width5.png",
+            "ascent": 7,
+            "chars": [
+                "#$%&+-/01234",
+                "56789=?ABCDE",
+                "FGHJKLMNOPQR",
+                "STUVWXYZ\\^_a",
+                "bcdeghjmnopq",
+                "rsuvwxyz\u0000\u0000\u0000\u0000"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "text_effects:font/shake/width6.png",
+            "ascent": 7,
+            "chars": [
+                "@~"
+            ]
+        }
+    ]
+}

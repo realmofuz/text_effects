@@ -1,0 +1,12 @@
+{
+    "providers": [
+        {
+            "type": "reference",
+            "id": "minecraft:include/space"
+        },
+        {
+            "type": "reference",
+            "id": "text_effects:include/wave/default"
+        }
+    ]
+}
