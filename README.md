@@ -21,5 +21,5 @@ The speed of periodic functions can be modified in `minecraft:shaders/core/rende
 - `text_effects:rainbow`: Implements Rainbow/Gradient for ASCII in the default Minecraft font.
 
 ## Known issues:
-- Text displays work, but use different units for moving characters, so currently cause characters to fly out of the text box.
+- Signs work, but use different units for position, so currently cause characters to fly off the sign.
 - Effects that move characters do not work very well with bold text. I do not plan to fix this.
