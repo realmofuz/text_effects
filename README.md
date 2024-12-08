@@ -12,7 +12,11 @@ The speed of periodic functions can be modified in `minecraft:shaders/core/rende
 - `rgb(242, 242, 255)`: Rainbow/Gradient - if the text color is grayscale, color each character with a moving rainbow. otherwise, color each character with a moving gradient between that color and white (with a cubic easing, making the white section smaller, like a shine moving across the text)
 - `rgb(242, 255, 255)`: Two-color - move the shadow where the text normally is. if the pixel has full opacity, it is rendered on the foreground. otherwise, it is rendered on the shadow. by changing both the text and shadow colors, two colors can be used at the same time.
 
-## Current implementation fonts:
+## Included implementation fonts:
 - `text_effects:wave`: Implements Wave for ASCII in the default Minecraft font.
 - `text_effects:shake`: Implements Shake for ASCII in the default Minecraft font.
 - `text_effects:rainbow`: Implements Rainbow/Gradient for ASCII in the default Minecraft font.
+
+## Known issues:
+- Text displays work, but use different units for moving characters, so currently cause characters to fly out of the text box.
+- Effects that move characters do not work very well with bold text. I do not plan to fix this.
